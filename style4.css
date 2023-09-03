@@ -1,0 +1,67 @@
+*{
+	font-family:'Poppins', sans-serif;
+	
+}
+.content-title{	
+	background-color:lightblue;
+	padding:20px;
+	text-align:center;
+	margin:auto;
+	color:white;
+	font-size:50px;
+}
+
+img{	
+	margin-left:auto;
+	margin-right:auto;
+	width:100%;
+}
+.calculator-TDEE{
+	margin-top:20px;
+	margin-right:20px;
+	border-radius:30px;
+	overflow:hidden;
+	background-color:lightblue;
+	float:left;
+	width:20%;
+	height:200px;
+	text-align:center;
+	
+}
+.TDEE-title{
+	background-color:red;
+	width:10%;
+}
+.calculator-BMI{
+	margin-top:20px;
+	margin-right:20px;
+	border-radius:30px;
+	overflow:hidden;
+	background-color:lightblue;
+	float:left;
+	height:200px;
+	width:20%;
+	text-align:center;
+}
+.calculator-BMR{
+	margin-top:20px;
+	margin-right:20px;
+	height:30%;
+	border-radius:30px;
+	overflow:hidden;
+	background-color:lightblue;
+	float:left;
+	width:20%;
+	text-align:center;
+}
+.calculator-WEST{
+	margin-top:20px;
+	margin-right:20px;
+	height:30%;
+	border-radius:30px;
+	overflow:hidden;
+	background-color:lightblue;
+	float:left;
+	width:20%;
+	text-align:center;
+}

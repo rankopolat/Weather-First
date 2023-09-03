@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>Weather Project</title>
+ <link rel="stylesheet" type="text/css" href="style3.css" />
+
+</head>
+<body>
+<div class="wrap">
+<div class="weather-title">Weather Project</div>
+<br />
+<div class="banner">
+
+	<div class="inputs">
+        <input type="text" placeholder="Enter any city..." id="cityinput">
+		<br />
+        <button id="add" onClick="weat()">click</button>
+	</div>
+	
+    <div class="wrapper">
+         <h2 id="cityoutput1"></h2>
+		 <div id ="countryoutput"></div>
+		 <div id ="tempoutput"></div>
+	</div>
+
+	<div class="weather-example-one">
+		<h1>Figtree</h1>
+		<div id ="figtree-output"></div>
+		<div id ="figtree-temp-output"></div>
+	</div>
+	<div class="weather-example-two"></div>
+</div>
+</div>
+</body>
+
+
+<script>
+apik = "9fede041a2bad60272e045a71f5efc7f";
+
+var inputval = document.querySelector('#cityinput')
+
+function weat(){
+
+ fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputval.value+'&appid='+apik)
+  .then(res => res.json())
+  .then(data => 
+  {
+    var nameval = data.name;
+	var countryval = data.sys.country;
+	var tem = data.main.temp
+	document.getElementById("cityoutput1").innerHTML = nameval+"<br />";
+	document.getElementById("countryoutput").innerHTML = countryval+"<br />";
+	document.getElementById("tempoutput").innerHTML = convertion(tem);
+  })
+
+  .catch(err => alert('You entered Wrong city name'))
+}
+
+function convertion(val)
+{
+    return Math.floor((val - 273))
+}
+</script>
+</html>
